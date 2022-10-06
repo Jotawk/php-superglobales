@@ -33,6 +33,7 @@
 			<input type="submit" name="submit" value="Ajouter le produit">
 		</p>
 	</form>
+	<a href="./recap.php">Afficher le récapitulatif</a>
 </body>
 
 </html>
