@@ -36,6 +36,7 @@ session_start();
 				"</div>";
 
 			$totalGeneral = 0;
+			$qttTotal = 0;
 
 			foreach ($_SESSION['products'] as $index => $product) {
 				echo
@@ -46,7 +47,10 @@ session_start();
 						"<td class='border border-slate-300'>".$product['qtt']."</td>",	
 						"<td class='border border-slate-300'>". number_format($product['total'], 2, ",", "&nbsp;") . "&nbsp;€</td>",
 					"</tr>";	
-				$totalGeneral += $product['total'];		
+				$totalGeneral += $product['total'];
+				$qttTotal += $product['qtt'];
+				$_SESSION['qttTotal'] = $qttTotal;
+
 				}
 				echo
 					"<tr>",
@@ -58,6 +62,8 @@ session_start();
 			"</div>";
 		}
 		?>
+		<?php echo "<p class='mt-3'>Il y a {$_SESSION['qttTotal']} produits présents en session </p>" ?>
+
 		<div class="mt-6">
 		<a href="./index.php" class="text-white bg-slate-900 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i class="fa-solid fa-left-long"></i>&ensp; Retourner à l'index</a>
 		</div>

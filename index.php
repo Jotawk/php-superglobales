@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -33,8 +36,9 @@
 						<input type="number" name="qtt" value="1" class="border-2 border-slate-900 p-1 mb-6" required>
 					</label>
 				</p>
-				<p>
-					<input type="submit" name="submit" value="Ajouter le produit" class="cursor-pointer text-white bg-blue-700 hover:bg-emerald-800 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+				<p class='mt-1'>Il y a <?php echo $_SESSION['qttTotal']?> produits présents en session </p>
+				</p>
+					<input type="submit" name="submit" value="Ajouter le produit" class="cursor-pointer text-white bg-blue-700 hover:bg-emerald-800 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5">
 				</p>
 				<div class="mt-6">
 				<a href="./recap.php" class="text-white bg-slate-900 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Afficher le récapitulatif</a>
