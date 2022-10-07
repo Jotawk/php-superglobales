@@ -16,12 +16,10 @@ if (isset($_POST['submit'])) {
 		];
 
 		$_SESSION['products'][] = $product;
-		$_SESSION['success'] = "Votre produit a bien été ajouté";
-		var_dump($_SESSION['success']);
+		$_SESSION['success'] = true;
 	} else {
-		$_SESSION['error'] = "Il semblerait qu'il y ait une erreur. Merci de remplir correctement le formulaire";
+		$_SESSION['success'] = false;
 	}
-
 }
 
 header("location:index.php");
