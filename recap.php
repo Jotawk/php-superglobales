@@ -65,9 +65,9 @@ session_start();
 
 		<?php 
 		if (isset($_SESSION['qttTotal'])) { 
-				echo " {$_SESSION['qttTotal']} produits présents en session";  
+				echo "<p class='mt-4'>{$_SESSION['qttTotal']} produits présents en session</p>";  
 			  } else {
-				echo "<p class='mt-4'> 0 produit présent en session </p>";
+				echo "<p class='mt-4'>0 produit présent en session</p>";
 			  }?></p>
 
 		<div class="mt-6">
