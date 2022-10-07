@@ -10,6 +10,7 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Exercice superglobales</title>
 	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -43,10 +44,12 @@ session_start();
 						echo "0 produit présent en session";
 						 }?> </p>
 				</p>
-					<input type="submit" name="submit" value="Ajouter le produit" class="cursor-pointer text-white bg-blue-700 hover:bg-emerald-800 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5">
-				</p>
+				<div class='cursor-pointer text-white bg-blue-700 hover:bg-emerald-800 font-medium rounded-lg text-sm py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5 w-48 pl-0'>
+					<i class="fa-solid fa-basket-shopping"></i><span>&ensp;</span><input type="submit" name="submit" value="Ajouter le produit" >
+				</div>
+		
 				<div class="mt-6">
-				<a href="./recap.php" class="text-white bg-slate-900 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Afficher le récapitulatif</a>
+				<a href="./recap.php" class="text-white bg-slate-900 font-medium rounded-lg text-sm px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i class="fa-solid fa-arrow-right"></i><span>&ensp;</span>Afficher le récapitulatif</a>
 				</div>
 			</div>
 		</div>
