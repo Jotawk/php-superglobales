@@ -32,6 +32,8 @@ unset($_SESSION['error']);
 							"<th class='border border-slate-300 bg-slate-300 p-3'>Prix</th>",
 							"<th class='border border-slate-300 bg-slate-300 p-3'>Quantité</th>",
 							"<th class='border border-slate-300 bg-slate-300 p-3'>Total</th>",
+							"<th class='border border-slate-300 bg-slate-600 p-3 text-white'>Modifier</th>",
+							"<th class='border border-slate-300 bg-slate-600 p-3 text-white'>Supprimer</th>",
 						"</tr>",
 					"</thead>",
 					"<tbody>",
@@ -48,6 +50,8 @@ unset($_SESSION['error']);
 						"<td class='border border-slate-300'>". number_format($product['price'], 2, ",", "&nbsp;") . "&nbsp;€</td>",	
 						"<td class='border border-slate-300'>".$product['qtt']."</td>",	
 						"<td class='border border-slate-300'>". number_format($product['total'], 2, ",", "&nbsp;") . "&nbsp;€</td>",
+						"<td class='border border-slate-300'>+ -</td>",
+						"<td class='border border-slate-300'><i class='fa-solid fa-xmark text-red-600'></i></td>",
 					"</tr>";	
 				$totalGeneral += $product['total'];
 				$qttTotal += $product['qtt'];
