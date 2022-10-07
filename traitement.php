@@ -17,8 +17,10 @@ if (isset($_POST['submit'])) {
 
 		$_SESSION['products'][] = $product;
 		$_SESSION['success'] = true;
+
 	} else {
-		$_SESSION['success'] = false;
+		$_SESSION['success'] = null;
+		$_SESSION['error'] = true;
 	}
 }
 

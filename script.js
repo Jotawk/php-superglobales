@@ -1,6 +1,6 @@
-const infoMessage = document.getElementById('info-message');
+const infoMessage = document.getElementsByClassName("info-message");
 
 setTimeout(function(){
-    infoMessage.style.display = 'none';
-  }, 5000);
-
+  for (let i = 0; i < infoMessage.length; i++){
+    infoMessage[i].style.display = 'none';
+  } }, 3000);

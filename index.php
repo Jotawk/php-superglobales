@@ -16,17 +16,18 @@ session_start();
 <body>
 
 	<?php 
-		if (isset($_SESSION['success'])) {
+		if (($_SESSION['success'] == true)) {
 			echo "
-			<div id='info-message' class='p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800'>
+			<div class='info-message p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800'>
 				<p>Votre produit a été ajouté avec succès</p>
 			</div>";
-		} else {
+		} else if (($_SESSION['error'] == true)) {
 			echo "
-			<div class='p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800'>
+			<div class='info-message p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800'>
 				<p>Il semblerait qu'il y ait une erreur. Merci de remplir correctement le formulaire</p>
 			</div>";
 		}
+
 	?>
 	<form action="traitement.php" method="post">
 		<div class="grid place-items-center h-screen">
@@ -58,7 +59,7 @@ session_start();
 						 }?> </p>
 				</p>
 				<div class='cursor-pointer text-white bg-blue-700 hover:bg-emerald-800 font-medium rounded-lg text-sm py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5 w-48 pl-0'>
-					<i class="fa-solid fa-basket-shopping"></i><span>&ensp;</span><input type="submit" name="submit" value="Ajouter le produit" >
+					<i class="fa-solid fa-basket-shopping"></i><span>&ensp;</span><input class='cursor-pointer' type="submit" name="submit" value="Ajouter le produit" >
 				</div>
 		
 				<div class="mt-6">
