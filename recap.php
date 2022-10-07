@@ -1,5 +1,7 @@
 <?php
 session_start();
+unset($_SESSION['success']);
+unset($_SESSION['error']);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -73,6 +75,7 @@ session_start();
 		<div class="mt-6">
 		<a href="./index.php" class="text-white bg-slate-900 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i class="fa-solid fa-left-long"></i>&ensp; Retourner à l'index</a>
 		</div>
+		
 
 </body>
 
