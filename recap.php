@@ -52,11 +52,14 @@ session_start();
 						"<td><strong class='border-slate-300 p-3'>". number_format($totalGeneral, 2, ",", "&nbsp;") . "&nbsp;€</td>",
 					"</tr>",
 					"</tbody>",
-				"</table>",
+				"</table>";
 			"</div>";
 		}
+		?>
+		<div class="mt-6">
+		<a href="./index.php" class="text-white bg-slate-900 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Retourner à l'index</a>
+		</div>
 
-	?>
 </body>
 
 </html>
