@@ -24,7 +24,7 @@ session_start();
 					"<thead>",
 						"<tr>",
 							"<th class='border-slate-300'>#</th>",
-							"<th class='border border-slate-300 bg-slate-300 p-3'>Nom</th>",
+							"<th class='border border-slate-300 bg-slate-300 p-4'>Nom</th>",
 							"<th class='border border-slate-300 bg-slate-300 p-3'>Prix</th>",
 							"<th class='border border-slate-300 bg-slate-300 p-3'>Quantité</th>",
 							"<th class='border border-slate-300 bg-slate-300 p-3'>Total</th>",
@@ -48,8 +48,8 @@ session_start();
 				}
 				echo
 					"<tr>",
-						"<td colspan=4 class='border border-slate-300 bg-slate-500'>Total général : </td>",
-						"<td><strong class='border border-slate-300'>". number_format($totalGeneral, 2, ",", "&nbsp;") . "&nbsp;€</td>",
+						"<td colspan=4 class='border border-slate-300 bg-slate-500 p-4 font-bold'>Total général : </td>",
+						"<td><strong class='border-slate-300 p-3'>". number_format($totalGeneral, 2, ",", "&nbsp;") . "&nbsp;€</td>",
 					"</tr>",
 					"</tbody>",
 				"</table>",
