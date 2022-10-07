@@ -50,8 +50,8 @@ unset($_SESSION['error']);
 						"<td class='border border-slate-300'>". number_format($product['price'], 2, ",", "&nbsp;") . "&nbsp;€</td>",	
 						"<td class='border border-slate-300'>".$product['qtt']."</td>",	
 						"<td class='border border-slate-300'>". number_format($product['total'], 2, ",", "&nbsp;") . "&nbsp;€</td>",
-						"<td class='border border-slate-300'>+ -</td>",
-						"<td class='border border-slate-300'><i class='fa-solid fa-xmark text-red-600'></i></td>",
+						"<td class='border border-slate-300'><i class='cursor-pointer fa-solid fa-plus text-sm'></i>&nbsp;&nbsp;<i class='cursor-pointer fa-solid fa-minus text-sm'></i></td>",
+						"<td class='border border-slate-300'><i class='cursor-pointer fa-solid fa-xmark text-red-600'></i></td>",
 					"</tr>";	
 				$totalGeneral += $product['total'];
 				$qttTotal += $product['qtt'];
