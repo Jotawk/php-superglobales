@@ -67,16 +67,15 @@ unset($_SESSION['error']);
 					"</tbody>",
 				"</table>";
 			"</div>";
+			
+			if($_SESSION['qttTotal'] === 1) {
+				echo "<p class='mt-4'>{$_SESSION['qttTotal']} produit présent en session</p>";
+			} else if ($_SESSION['qttTotal']) { 
+				echo "<p class='mt-4'>{$_SESSION['qttTotal']} produits présents en session</p>";  
+			} 
 		}
-		?>
 
-		<?php 
-		if (!isset($_SESSION['qttTotal'])) { 
-			echo "<p class='mt-4'>0 produit présent en session</p>";
-		} else if (isset($_SESSION['qttTotal'])) { 
-			echo "<p class='mt-4'>{$_SESSION['qttTotal']} produits présents en session</p>";  
-		} 
-				
+
 		?>
 
 		<div class="flex flex-col">
