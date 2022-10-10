@@ -62,6 +62,7 @@ unset($_SESSION['error']);
 				echo
 					"<tr>",
 						"<td colspan=4 class='border border-slate-300 bg-slate-500 p-4 font-bold'>Total général : </td>",
+						// "<td><strong class='border-slate-300 p-3'>". number_format($totalGeneral, 2, ",", "&nbsp;") . "&nbsp;€</td>",
 						"<td><strong class='border-slate-300 p-3'>". number_format($totalGeneral, 2, ",", "&nbsp;") . "&nbsp;€</td>",
 					"</tr>",
 					"</tbody>",
@@ -74,8 +75,6 @@ unset($_SESSION['error']);
 				echo "<p class='mt-4'>{$_SESSION['qttTotal']} produits présents en session</p>";  
 			} 
 		}
-
-
 		?>
 
 		<div class="flex flex-col">
@@ -88,11 +87,8 @@ unset($_SESSION['error']);
 				<lord-icon src="https://cdn.lordicon.com/jmkrnisz.json" trigger="loop" style="width:24px;height:auto"></lord-icon>
 			Vider le panier</a>
 			</div>
-
-
 		</div>
 		
-
 </body>
 
 </html>

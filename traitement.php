@@ -44,9 +44,9 @@ switch($action) {
 	break;
 
 	case "diminuerProduit":
-		$Qte = $_SESSION["products"][$id]["qtt"]--;
-		if ($Qte <= 0) {
-			$Qte = 0;
+		$_SESSION["products"][$id]["qtt"]--;
+		if($_SESSION["products"][$id]["qtt"] == 0) {
+			unset($_SESSION["products"][$id]);
 		}
 		header("location:recap.php");
 	break;

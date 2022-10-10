@@ -49,7 +49,7 @@ session_start();
 				<p>
 					<label>
 						Quantité désirée :
-						<input type="number" name="qtt" value="1" class="border-2 border-slate-900 p-1 mb-6">
+						<input type="number" name="qtt" value="1" min="0" class="border-2 border-slate-900 p-1 mb-6">
 					</label>
 				</p>
 				<p class='mt-1'>Il y a 
