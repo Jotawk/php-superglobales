@@ -51,13 +51,13 @@ unset($_SESSION['error']);
 						"<td class='border border-slate-300'>". number_format($product['price'], 2, ",", "&nbsp;") . "&nbsp;€</td>",	
 						"<td class='border border-slate-300'>".$product['qtt']."</td>",	
 						"<td class='border border-slate-300'>". number_format($product['total'], 2, ",", "&nbsp;") . "&nbsp;€</td>",
-						"<td class='border border-slate-300'><i class='cursor-pointer fa-solid fa-plus text-sm'></i>&nbsp;&nbsp;<i class='cursor-pointer fa-solid fa-minus text-sm'></i></td>",
+						"<td class='border border-slate-300'><a href='traitement.php?action=minusProduit&id=$index'><i class='cursor-pointer fa-solid fa-plus text-sm'></i>&nbsp;&nbsp;<i class='cursor-pointer fa-solid fa-minus text-sm'></i></a></td>",
 						"<td class='border border-slate-300'><a href='traitement.php?action=supprimerProduit&id=$index'><i class='cursor-pointer fa-solid fa-xmark text-red-600'></i></a></td>",
 					"</tr>";	
+
 				$totalGeneral += $product['total'];
 				$qttTotal += $product['qtt'];
 				$_SESSION['qttTotal'] = $qttTotal;
-
 				}
 				echo
 					"<tr>",
@@ -67,7 +67,7 @@ unset($_SESSION['error']);
 					"</tbody>",
 				"</table>";
 			"</div>";
-			
+
 			if($_SESSION['qttTotal'] === 1) {
 				echo "<p class='mt-4'>{$_SESSION['qttTotal']} produit présent en session</p>";
 			} else if ($_SESSION['qttTotal']) { 
