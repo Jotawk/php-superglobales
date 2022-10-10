@@ -12,6 +12,7 @@ unset($_SESSION['error']);
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Récapitulatif des produits</title>
 	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	
 </head>
@@ -78,6 +79,11 @@ unset($_SESSION['error']);
 
 		<div class="mt-6">
 		<a href="./index.php" class="text-white bg-slate-900 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i class="fa-solid fa-left-long"></i>&ensp; Retourner à l'index</a>
+		</div>
+		<div class="mt-6">
+		<a href="#" class="p-2.5 mb-4 text-sm text-white font-medium bg-red-500 rounded-lg dark:bg-red-400"><lord-icon
+    	src="https://cdn.lordicon.com/jmkrnisz.json" trigger="loop" style="width:24px;height:auto">
+		</lord-icon>&ensp;Supprimer tous les éléments</a>
 		</div>
 		
 
