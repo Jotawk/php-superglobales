@@ -16,20 +16,8 @@ session_start();
 <body>
 
 	<?php 
-	
-		if (isset($_SESSION['success'])) {
-			echo "
-			<div class='info-message p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800'>
-				<p>Votre produit a été ajouté avec succès</p>
-			</div>";
-
-		} else if (isset($_SESSION['error'])) {
-			echo "
-			<div class='info-message p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800'>
-				<p>Il semblerait qu'il y ait une erreur. Merci de remplir correctement le formulaire</p>
-			</div>";
-		}
-
+	require 'functions.php';
+	showMessage();
 	?>
 	<form action="traitement.php?action=ajouterProduit" method="post">
 		<div class="grid place-items-center h-screen">
@@ -55,10 +43,10 @@ session_start();
 				</p>
 
 				<p class='mt-1'>Il y a 
-				<?php if(isset($_SESSION["products"]) > 1) {
-						echo count($_SESSION["products"]) . " produits </p>";	
+				<?php if(isset($_SESSION["products"])) {
+						echo count($_SESSION["products"]) . " produits différents</p>";	
 					} else {
-						echo count($_SESSION["products"]) . " produit </p>";
+						echo " 0 produit";
 					}
 				?>
 				<div class='cursor-pointer text-white bg-blue-700 hover:bg-emerald-800 font-medium rounded-lg text-sm py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5 w-48 pl-0'>

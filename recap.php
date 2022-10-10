@@ -1,7 +1,7 @@
 <?php
 session_start();
-// unset($_SESSION['success']);
-// unset($_SESSION['error']);
+unset($_SESSION['success']);
+unset($_SESSION['error']);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,6 +19,9 @@ session_start();
 
 <body>
 	<?php
+	require 'functions.php';
+	showMessage();
+
 	if (!isset($_SESSION['products']) || empty($_SESSION['products'])) {
 		echo "<p>Aucun produit en session...</p>";
 	} else {
