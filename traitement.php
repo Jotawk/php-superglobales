@@ -2,6 +2,7 @@
 session_start();
 
 $action = $_GET["action"];
+$id = (isset($_GET["id"])) ? $_GET["id"] : "";
 
 switch($action) {
 	case "ajouterProduit":
@@ -31,7 +32,13 @@ switch($action) {
 	break;
 
 	case "viderPanier":
+		// unset($_SESSION["qttTotal"]);
 		unset($_SESSION["products"]);
+		header("location:recap.php");
+	break;
+
+	case "supprimerProduit":
+		unset($_SESSION["products"][$id]);
 		header("location:recap.php");
 	break;
 }

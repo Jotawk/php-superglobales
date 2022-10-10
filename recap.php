@@ -52,7 +52,7 @@ unset($_SESSION['error']);
 						"<td class='border border-slate-300'>".$product['qtt']."</td>",	
 						"<td class='border border-slate-300'>". number_format($product['total'], 2, ",", "&nbsp;") . "&nbsp;€</td>",
 						"<td class='border border-slate-300'><i class='cursor-pointer fa-solid fa-plus text-sm'></i>&nbsp;&nbsp;<i class='cursor-pointer fa-solid fa-minus text-sm'></i></td>",
-						"<td class='border border-slate-300'><i class='cursor-pointer fa-solid fa-xmark text-red-600'></i></td>",
+						"<td class='border border-slate-300'><a href='traitement.php?action=supprimerProduit&id=$index'><i class='cursor-pointer fa-solid fa-xmark text-red-600'></i></a></td>",
 					"</tr>";	
 				$totalGeneral += $product['total'];
 				$qttTotal += $product['qtt'];
@@ -71,25 +71,26 @@ unset($_SESSION['error']);
 		?>
 
 		<?php 
-		if (isset($_SESSION['qttTotal'])) { 
-				echo "<p class='mt-4'>{$_SESSION['qttTotal']} produits présents en session</p>";  
-			  } else {
-				echo "<p class='mt-4'>0 produit présent en session</p>";
-			  }?>
+		if (!isset($_SESSION['qttTotal'])) { 
+			echo "<p class='mt-4'>0 produit présent en session</p>";
+		} else if (isset($_SESSION['qttTotal'])) { 
+			echo "<p class='mt-4'>{$_SESSION['qttTotal']} produits présents en session</p>";  
+		} 
+				
+		?>
 
 		<div class="flex flex-col">
 			<div class="mt-4">
 			<a href="./index.php" class="text-white bg-slate-900 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i class="fa-solid fa-left-long"></i>&ensp; Retourner à l'index</a>
 			</div>
 			
-			<form action="./traitement.php" method="post">
-				<div class="mt-4 cursor-pointer p-2.5 text-sm text-white font-medium bg-red-500 rounded-lg dark:bg-red-400 w-60">
-					<lord-icon src="https://cdn.lordicon.com/jmkrnisz.json" trigger="loop" style="width:24px;height:auto"></lord-icon>
-					<input class="cursor-pointer" type="submit" name="delete-values" value="Supprimer tous les produits" >
-				</div>
-			</form>
+			<div class="mt-5">
+			<a class="cursor-pointer p-2.5 text-sm text-white font-medium bg-red-500 rounded-lg dark:bg-red-400" href="traitement.php?action=viderPanier">
+				<lord-icon src="https://cdn.lordicon.com/jmkrnisz.json" trigger="loop" style="width:24px;height:auto"></lord-icon>
+			Vider le panier</a>
+			</div>
 
-			<a href="traitement.php?action=viderPanier">Vider le panier</a>
+
 		</div>
 		
 
