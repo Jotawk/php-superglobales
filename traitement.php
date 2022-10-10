@@ -45,6 +45,7 @@ switch($action) {
 
 	case "diminuerProduit":
 		$_SESSION["products"][$id]["qtt"]--;
+		$_SESSION["products"][$id]["total"] = $_SESSION["products"][$id]["price"] * $_SESSION["products"][$id]["qtt"];
 		if($_SESSION["products"][$id]["qtt"] == 0) {
 			unset($_SESSION["products"][$id]);
 		}
@@ -53,6 +54,7 @@ switch($action) {
 
 	case "augmenterProduit":
 		$_SESSION["products"][$id]["qtt"]++;
+		$_SESSION["products"][$id]["total"] = $_SESSION["products"][$id]["price"] * $_SESSION["products"][$id]["qtt"];
 		header("location:recap.php");
 	break;
 

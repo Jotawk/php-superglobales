@@ -52,13 +52,14 @@ session_start();
 						<input type="number" name="qtt" value="1" min="0" class="border-2 border-slate-900 p-1 mb-6">
 					</label>
 				</p>
+
 				<p class='mt-1'>Il y a 
-					<?php if(isset($_SESSION['qttTotal'])) { 
-						echo " {$_SESSION['qttTotal']} produits présents en session";  
-						} else {
-						echo "0 produit présent en session";
-						 }?> </p>
-				</p>
+				<?php if(isset($_SESSION["products"]) > 1) {
+						echo count($_SESSION["products"]) . " produits </p>";	
+					} else {
+						echo count($_SESSION["products"]) . " produit </p>";
+					}
+				?>
 				<div class='cursor-pointer text-white bg-blue-700 hover:bg-emerald-800 font-medium rounded-lg text-sm py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5 w-48 pl-0'>
 					<i class="fa-solid fa-basket-shopping"></i><span>&ensp;</span><input class='cursor-pointer' type="submit" name="submit" value="Ajouter le produit" >
 				</div>
