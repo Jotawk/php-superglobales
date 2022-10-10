@@ -16,8 +16,7 @@ session_start();
 <body>
 
 	<?php 
-	require 'functions.php';
-	showMessage();
+
 	?>
 	<form action="traitement.php?action=ajouterProduit" method="post">
 		<div class="grid place-items-center h-screen">
@@ -44,7 +43,7 @@ session_start();
 
 				<p class='mt-1'>Il y a 
 				<?php if(isset($_SESSION["products"])) {
-						echo count($_SESSION["products"]) . " produits différents</p>";	
+						echo count($_SESSION["products"]) . " produits dans le panier</p>";	
 					} else {
 						echo " 0 produit";
 					}

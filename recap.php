@@ -20,8 +20,8 @@ unset($_SESSION['error']);
 <body>
 	<?php
 	require 'functions.php';
-	showMessage();
-
+	echo showMessage();
+	
 	if (!isset($_SESSION['products']) || empty($_SESSION['products'])) {
 		echo "<p>Aucun produit en session...</p>";
 	} else {
