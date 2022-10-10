@@ -30,7 +30,7 @@ session_start();
 		}
 
 	?>
-	<form action="traitement.php" method="post">
+	<form action="traitement.php?action=ajouterProduit" method="post">
 		<div class="grid place-items-center h-screen">
 			<div class="border-solid border-2 border-slate-900 rounded-lg p-8">	
 			<h1 class="text-4xl mb-8">Ajouter un produit :</h1>

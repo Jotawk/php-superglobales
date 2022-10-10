@@ -75,15 +75,21 @@ unset($_SESSION['error']);
 				echo "<p class='mt-4'>{$_SESSION['qttTotal']} produits présents en session</p>";  
 			  } else {
 				echo "<p class='mt-4'>0 produit présent en session</p>";
-			  }?></p>
+			  }?>
 
-		<div class="mt-6">
-		<a href="./index.php" class="text-white bg-slate-900 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i class="fa-solid fa-left-long"></i>&ensp; Retourner à l'index</a>
-		</div>
-		<div class="mt-6">
-		<a href="#" class="p-2.5 mb-4 text-sm text-white font-medium bg-red-500 rounded-lg dark:bg-red-400"><lord-icon
-    	src="https://cdn.lordicon.com/jmkrnisz.json" trigger="loop" style="width:24px;height:auto">
-		</lord-icon>&ensp;Supprimer tous les éléments</a>
+		<div class="flex flex-col">
+			<div class="mt-4">
+			<a href="./index.php" class="text-white bg-slate-900 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i class="fa-solid fa-left-long"></i>&ensp; Retourner à l'index</a>
+			</div>
+			
+			<form action="./traitement.php" method="post">
+				<div class="mt-4 cursor-pointer p-2.5 text-sm text-white font-medium bg-red-500 rounded-lg dark:bg-red-400 w-60">
+					<lord-icon src="https://cdn.lordicon.com/jmkrnisz.json" trigger="loop" style="width:24px;height:auto"></lord-icon>
+					<input class="cursor-pointer" type="submit" name="delete-values" value="Supprimer tous les produits" >
+				</div>
+			</form>
+
+			<a href="traitement.php?action=viderPanier">Vider le panier</a>
 		</div>
 		
 
