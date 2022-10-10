@@ -33,13 +33,13 @@ switch($action) {
 	break;
 
 	case "viderPanier":
-		// unset($_SESSION["qttTotal"]);
 		unset($_SESSION["products"]);
 		header("location:recap.php");
 	break;
 
 	case "supprimerProduit":
 		unset($_SESSION["products"][$id]);
+		$_SESSION['success'] = true;
 		header("location:recap.php");
 	break;
 

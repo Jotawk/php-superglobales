@@ -1,7 +1,7 @@
 <?php
 session_start();
-unset($_SESSION['success']);
-unset($_SESSION['error']);
+// unset($_SESSION['success']);
+// unset($_SESSION['error']);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -62,7 +62,6 @@ unset($_SESSION['error']);
 				echo
 					"<tr>",
 						"<td colspan=4 class='border border-slate-300 bg-slate-500 p-4 font-bold'>Total général : </td>",
-						// "<td><strong class='border-slate-300 p-3'>". number_format($totalGeneral, 2, ",", "&nbsp;") . "&nbsp;€</td>",
 						"<td><strong class='border-slate-300 p-3'>". number_format($totalGeneral, 2, ",", "&nbsp;") . "&nbsp;€</td>",
 					"</tr>",
 					"</tbody>",
