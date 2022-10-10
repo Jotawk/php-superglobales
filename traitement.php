@@ -44,12 +44,15 @@ switch($action) {
 	break;
 
 	case "diminuerProduit":
-		var_dump($_SESSION["products"][$id]["qtt"]--);
+		$Qte = $_SESSION["products"][$id]["qtt"]--;
+		if ($Qte <= 0) {
+			$Qte = 0;
+		}
 		header("location:recap.php");
 	break;
 
 	case "augmenterProduit":
-		var_dump($_SESSION["products"][$id]["qtt"]++);
+		$_SESSION["products"][$id]["qtt"]++;
 		header("location:recap.php");
 	break;
 
