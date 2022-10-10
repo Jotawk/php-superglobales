@@ -43,8 +43,13 @@ switch($action) {
 		header("location:recap.php");
 	break;
 
-	case "minusProduit":
-		
+	case "diminuerProduit":
+		var_dump($_SESSION["products"][$id]["qtt"]--);
+		header("location:recap.php");
+	break;
+
+	case "augmenterProduit":
+		var_dump($_SESSION["products"][$id]["qtt"]++);
 		header("location:recap.php");
 	break;
 

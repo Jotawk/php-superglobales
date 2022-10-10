@@ -51,7 +51,7 @@ unset($_SESSION['error']);
 						"<td class='border border-slate-300'>". number_format($product['price'], 2, ",", "&nbsp;") . "&nbsp;€</td>",	
 						"<td class='border border-slate-300'>".$product['qtt']."</td>",	
 						"<td class='border border-slate-300'>". number_format($product['total'], 2, ",", "&nbsp;") . "&nbsp;€</td>",
-						"<td class='border border-slate-300'><a href='traitement.php?action=minusProduit&id=$index'><i class='cursor-pointer fa-solid fa-plus text-sm'></i>&nbsp;&nbsp;<i class='cursor-pointer fa-solid fa-minus text-sm'></i></a></td>",
+						"<td class='border border-slate-300'><a href='traitement.php?action=augmenterProduit&id=$index'><i class='cursor-pointer fa-solid fa-plus text-sm'></i></a>&nbsp;&nbsp;<a href='traitement.php?action=diminuerProduit&id=$index'><i class='cursor-pointer fa-solid fa-minus text-sm'></i></a></td>",
 						"<td class='border border-slate-300'><a href='traitement.php?action=supprimerProduit&id=$index'><i class='cursor-pointer fa-solid fa-xmark text-red-600'></i></a></td>",
 					"</tr>";	
 
