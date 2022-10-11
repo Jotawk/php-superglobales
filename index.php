@@ -29,9 +29,8 @@ if (isset($_SESSION['success'])) {
 		</div>";
 } 
 
-
-
 	?>
+	
 	<form action="traitement.php?action=ajouterProduit" method="post">
 		<div class="grid place-items-center h-screen">
 			<div class="border-solid border-2 border-slate-900 rounded-lg p-8">	
