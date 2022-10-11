@@ -34,12 +34,13 @@ switch($action) {
 
 	case "viderPanier":
 		unset($_SESSION["products"]);
-		$_SESSION['message'] = "Le panier a été vidé !";
+		$_SESSION['message'] = "<div class='info-message p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800'>Le panier a été vidé !</div>";
 		header("location:recap.php");
 	break;
 
 	case "supprimerProduit":
-		$_SESSION['message'] = "<div class='info-message'> Le produit ". $_SESSION["products"][$id]["name"]. " a été supprimé !</div>";
+		$_SESSION['message'] = "<div class='info-message p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800'>
+		Le produit ". $_SESSION["products"][$id]["name"]. " a été supprimé !</div>";
 		unset($_SESSION["products"][$id]);
 		header("location:recap.php");
 	break;
@@ -60,9 +61,6 @@ switch($action) {
 	break;
 
 }
-
-
-
 
 
 

@@ -23,7 +23,7 @@ unset($_SESSION['error']);
 	echo showMessage();
 	
 	if (!isset($_SESSION['products']) || empty($_SESSION['products'])) {
-		echo "<p>Aucun produit en session...</p>";
+		echo "<p class='mt-8'>Aucun produit en session...</p>";
 	} else {
 		echo
 			"<div class='grid place-items-center h-screen'>",
